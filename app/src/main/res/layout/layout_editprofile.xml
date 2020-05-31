@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imgEditProfileAvatar"
+        android:layout_width="148dp"
+        android:layout_height="141dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/border_round" />
+
+    <Button
+        android:id="@+id/btnEditProfileAvatar"
+        android:layout_width="166dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/border_button"
+        android:drawableLeft="@android:drawable/ic_menu_camera"
+        android:paddingLeft="20dp"
+        android:text=" Tải ảnh lên"
+        android:textColor="@android:color/background_light" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:gravity="center|left"
+            android:paddingLeft="40dp"
+            android:text="Họ và tên"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edtEditProfileHoVaTen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:gravity="center|left"
+            android:inputType="textPersonName"
+            android:paddingLeft="30dp"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:gravity="center|left"
+            android:paddingLeft="40dp"
+            android:text="Số điện thoại"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edtEditProfileSDT"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:gravity="center|left"
+            android:inputType="textPersonName"
+            android:paddingLeft="30dp"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:gravity="center|left"
+            android:paddingLeft="40dp"
+            android:text="Địa chỉ"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edtEditProfileDiaChi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:gravity="center|left"
+            android:inputType="textPersonName"
+            android:paddingLeft="30dp"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|right">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="194dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="32dp"
+            android:layout_weight="0"
+            android:background="@drawable/border_button"
+            android:drawableLeft="@android:drawable/ic_menu_save"
+            android:paddingHorizontal="15dp"
+            android:text="Lưu thông tin"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+</LinearLayout>
