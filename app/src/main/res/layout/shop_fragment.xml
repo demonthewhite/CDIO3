@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.ShopFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edt_layout_search"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            app:boxCornerRadiusBottomEnd="14dp"
+            app:boxCornerRadiusBottomStart="14dp"
+            app:boxCornerRadiusTopEnd="14dp"
+            app:boxCornerRadiusTopStart="14dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tìm kiếm" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcl_kindfish"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/edt_layout_search"
+            android:layout_marginTop="-1dp"
+            android:overScrollMode="always"></androidx.recyclerview.widget.RecyclerView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcl_favorite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rcl_kindfish"
+            android:layout_marginTop="1dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/lb_shop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rcl_favorite"
+            android:background="@color/cardview_light_background"
+            android:text="Trưng bày"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="10pt"></TextView>
+
+        <com.example.qlbhcdio.ui.component.MyGirdView
+            android:id="@+id/gird_sellFish"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/lb_shop"
+            android:alwaysDrawnWithCache="true"
+            android:clipChildren="true"
+            android:columnWidth="100dp"
+            android:gravity="center_horizontal"
+            android:numColumns="2"
+            android:overScrollMode="ifContentScrolls"
+            android:smoothScrollbar="true"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="10dp"></com.example.qlbhcdio.ui.component.MyGirdView>
+    </RelativeLayout>
+</ScrollView>
