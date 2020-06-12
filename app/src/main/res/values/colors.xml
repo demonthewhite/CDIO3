@@ -3,6 +3,6 @@
     <color name="colorPrimary">#FFFFFF</color>
     <color name="colorPrimaryDark">#81504F4F</color>
     <color name="colorAccent">#E1EDEC</color>
-
+    <color name="BtnLoginRegister" ></color>
 
 </resources>

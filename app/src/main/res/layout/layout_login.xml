@@ -1,101 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/login"
+
     android:orientation="vertical">
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="199dp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/edtTaiKhoan"
-            android:layout_width="match_parent"
-            android:layout_height="58dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_weight="1"
-            android:background="@drawable/border_edit_text"
-            android:ems="10"
-            android:hint=" Tên đăng nhập"
-            android:inputType="textPersonName"
-            android:paddingLeft="16dp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/edtMatKhau"
-            android:layout_width="match_parent"
-            android:layout_height="59dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_weight="1"
-            android:background="@drawable/border_edit_text"
-            android:ems="10"
-            android:hint=" Mật khẩu"
-            android:inputType="textPassword"
-            android:paddingLeft="16dp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:orientation="horizontal">
-
-        <CheckBox
-            android:id="@+id/cbNhoMatKhau"
-            android:layout_width="105dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="16dp"
-            android:layout_weight="1"
-            android:text="Nhớ mật khẩu"
-            android:textSize="18sp" />
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/btnDangNhap"
-        android:layout_width="205dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/border_button"
-        android:text="Đăng Nhập"
-        android:textColor="#FFFFFF" />
-
-    <TextView
-        android:id="@+id/tvQuenMatKhau"
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:gravity="center|right"
-        android:text="Quên mật khẩu ?"
-        android:textSize="18sp" />
+        android:layout_gravity="center">
 
-    <Button
-        android:id="@+id/btnDangKy"
-        android:layout_width="205dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/border_button"
-        android:text="Đăng Ký"
-        android:textColor="#FFFFFF" />
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:paddingLeft="60dp"
+            android:text="Đăng nhập"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#A9040457"
+            />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/txt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt1"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="32dp"
+            android:textColor="#A9040457"
+            android:text="Chào mừng bạn đến với dịch vụ chúng của tôi"
+            android:textSize="17sp" />
+
+        <RelativeLayout
+            android:id="@+id/frameDangNhap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt2"
+            android:layout_margin="16dp"
+            android:background="@drawable/border_line2"
+            >
+
+            <Button
+                android:id="@+id/btnDangKy"
+                android:layout_width="205dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvQuenMatKhau"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/border_button"
+                android:text="Đăng Ký"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/tvQuenMatKhau"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnDangNhap"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:text="Quên mật khẩu ?"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btnDangNhap"
+                android:layout_width="205dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cbNhoMatKhau"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/border_button"
+                android:text="Đăng Nhập"
+                android:textColor="#FFFFFF" />
+
+            <CheckBox
+                android:id="@+id/cbNhoMatKhau"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtMatKhau"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="16dp"
+                android:text="Nhớ mật khẩu"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edtMatKhau"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/edtTaiKhoan"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/border_edit_text"
+                android:ems="10"
+                android:hint=" Mật khẩu"
+                android:inputType="textPassword"
+                android:paddingLeft="16dp" />
+
+            <EditText
+                android:id="@+id/edtTaiKhoan"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/border_edit_text"
+                android:ems="10"
+                android:hint=" Tên đăng nhập"
+                android:inputType="textPersonName"
+                android:paddingLeft="16dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</FrameLayout>
