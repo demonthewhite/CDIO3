@@ -49,12 +49,13 @@ public class RegisterPage extends AppCompatActivity implements View.OnClickListe
     }
 
     void Register() {
-       if(presenter.CheckRegister(edtID.getText().toString()
+
+        if (presenter.CheckRegister(edtID.getText().toString()
                 , edtPassword.getText().toString()
                 , edtCPassword.getText().toString()
                 , edtEmail.getText().toString()
-                ,cbDieuKhoan.isSelected())) {
-           Toast.makeText(RegisterPage.this,"Đăng ký thành công !",Toast.LENGTH_SHORT).show();
+                , cbDieuKhoan.isSelected())) {
+            Toast.makeText(RegisterPage.this, "Đăng ký thành công !", Toast.LENGTH_SHORT).show();
         }
     }
 

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@android:color/secondary_text_light_nodisable">
+    <item>
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="30dp" />
+                    <solid android:color="@color/cardview_light_background" />
+                </shape>
+            </item>
+            <item
+                android:width="30dp"
+                android:height="30dp"
+                android:drawable="@drawable/ic_baseline_delete"
+                android:gravity="center" />
+        </layer-list>
+    </item>
+</ripple>

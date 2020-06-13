@@ -3,7 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/register"
-    android:orientation="vertical">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context="com.example.qlbhcdio.view.RegisterPage">
 
     <TextView
         android:layout_width="126dp"
@@ -13,7 +15,6 @@
 
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="30dp"
-        android:text="@string/ng_k"
         android:textSize="28sp"
         android:textStyle="bold" />
 

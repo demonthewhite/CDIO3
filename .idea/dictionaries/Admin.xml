@@ -1,7 +1,11 @@
 <component name="ProjectDictionaryState">
+<<<<<<< HEAD
   <dictionary name="Admin">
     <words>
       <w>khoan</w>
     </words>
   </dictionary>
+=======
+  <dictionary name="Admin" />
+>>>>>>> 34a869fc9aa9cb090780d97b81ab70b5a0b3e1c7
 </component>

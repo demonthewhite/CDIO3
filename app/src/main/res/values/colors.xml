@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FFFFFF</color>
-    <color name="colorPrimaryDark">#81504F4F</color>
-    <color name="colorAccent">#E1EDEC</color>
-    <color name="BtnLoginRegister" ></color>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="black_overlay">#66000000</color>
+
+>>>>>>> 34a869fc9aa9cb090780d97b81ab70b5a0b3e1c7
 
 </resources>
