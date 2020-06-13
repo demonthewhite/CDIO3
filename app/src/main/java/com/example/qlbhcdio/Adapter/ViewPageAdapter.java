@@ -1,22 +1,22 @@
 package com.example.qlbhcdio.Adapter;
 
-import android.util.Log;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
+import com.example.qlbhcdio.model.Product;
 import com.example.qlbhcdio.ui.account.AccountFragment;
 import com.example.qlbhcdio.ui.history.HistoryFragment;
-import com.example.qlbhcdio.ui.home.ShopFragment;
+import com.example.qlbhcdio.ui.shop.ShopFragment;
 import com.example.qlbhcdio.ui.settings.SettingFragment;
 
-public class ViewPageAdapter extends FragmentStatePagerAdapter {
+public class ViewPageAdapter extends FragmentStatePagerAdapter implements ShopFragment.SendItemToGirdAdapter {
+    private SendItemToHomePage itemToHomePage;
 
-    public ViewPageAdapter(@NonNull FragmentManager fm) {
+    public ViewPageAdapter(@NonNull FragmentManager fm, SendItemToHomePage itemToHomePage) {
         super(fm);
-
+        this.itemToHomePage = itemToHomePage;
     }
 
     @NonNull
@@ -24,7 +24,7 @@ public class ViewPageAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return new ShopFragment();
+                return new ShopFragment(this);
             case 1:
                 return new HistoryFragment();
             case 2:
@@ -40,4 +40,13 @@ public class ViewPageAdapter extends FragmentStatePagerAdapter {
         return 4;
     }
 
+    @Override
+    public void OnSend(Product fish) {
+        itemToHomePage.onSend(fish);
+    }
+
+    // gửi item tới Home
+    public interface SendItemToHomePage {
+        void onSend(Product fish);
+    }
 }

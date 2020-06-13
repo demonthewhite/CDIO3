@@ -5,30 +5,43 @@
     android:layout_height="match_parent">
 
 
+    <FrameLayout
+        android:layout_above="@+id/bottom_navigation"
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <FrameLayout
-            android:id="@+id/frame_layout"
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_page"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"></androidx.viewpager.widget.ViewPager>
+    </FrameLayout>
 
-            <androidx.viewpager.widget.ViewPager
-                android:id="@+id/view_page"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"></androidx.viewpager.widget.ViewPager>
-        </FrameLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/float_button_cart"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/bottom_navigation"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_baseline_shopping"
+        app:backgroundTint="#F8FF568F"
+        app:rippleColor="#FFE5EE"
+        app:tint="@color/cardview_light_background"></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_navigation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:background="@color/cardview_light_background"
-            app:elevation="@dimen/cardview_default_elevation"
-            app:itemIconTint="@android:color/holo_orange_dark"
-            app:itemRippleColor="@android:color/tertiary_text_dark"
-            app:itemTextColor="@android:color/holo_orange_light"
-            app:menu="@menu/bottom_nav_menu" />
-
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/cardview_light_background"
+        app:elevation="@dimen/cardview_default_elevation"
+        app:itemIconTint="@android:color/holo_orange_dark"
+        app:itemRippleColor="@android:color/tertiary_text_dark"
+        app:itemTextColor="@android:color/holo_orange_light"
+        app:menu="@menu/bottom_nav_menu" />
 
 
 </RelativeLayout>

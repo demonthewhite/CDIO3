@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:text="Giỏ Hàng"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="8pt" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/cardview_shadow_end_color" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcl_cart"
+        android:layout_width="match_parent"
+        android:layout_height="400dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/cardview_shadow_end_color" />
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingHorizontal="10dp">
+
+        <ImageView
+            android:id="@+id/img_view"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_baseline_add_shopping_cart" />
+
+        <TextView
+            android:id="@+id/tv_sumMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/img_view"
+            android:text="0"
+            android:textSize="8pt" />
+
+        <TextView
+            android:id="@+id/lb_dollar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@+id/tv_sumMoney"
+            android:text="$"
+            android:textSize="8pt" />
+
+        <Button
+            android:id="@+id/btn_delivery"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/btn_delivery"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="Giao hàng"
+            android:textAllCaps="false"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="6pt" />
+    </RelativeLayout>
+
+
+</LinearLayout>

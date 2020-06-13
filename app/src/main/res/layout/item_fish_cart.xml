@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:elevation="10dp"
+        android:id="@+id/CardView_Cart"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/img_fishCart"
+                android:layout_width="100dp"
+                android:layout_height="100dp" />
+
+            <RelativeLayout
+                android:id="@+id/SizeBox"
+                android:layout_width="15dp"
+                android:layout_height="100dp"
+                android:layout_toRightOf="@id/img_fishCart" />
+
+            <TextView
+                android:id="@+id/tv_nameFishCart"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_toLeftOf="@+id/btn_delete_cart"
+                android:layout_toRightOf="@+id/SizeBox"
+                android:autoSizeMaxTextSize="8pt"
+                android:autoSizeMinTextSize="7pt"
+                android:autoSizeTextType="uniform"
+                android:gravity="center|start"
+                android:maxLines="2"
+                android:text="name"
+                android:textSize="8pt" />
+
+            <TextView
+                android:id="@+id/tv_costCart"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_below="@+id/tv_nameFishCart"
+                android:layout_toRightOf="@id/SizeBox"
+                android:gravity="center|start"
+                android:text="0"
+                android:textSize="7pt" />
+
+            <TextView
+                android:id="@+id/lb_dollar"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_below="@+id/tv_nameFishCart"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tv_costCart"
+                android:gravity="center|start"
+                android:text="$"
+                android:textSize="7pt" />
+
+            <Button
+                android:id="@+id/btn_delete_cart"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:background="@drawable/btn_delete_itemcart" />
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

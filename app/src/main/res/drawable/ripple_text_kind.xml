@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#D6BFFF">
+    <item>
+        <shape  xmlns:android="http://schemas.android.com/apk/res/android">
+            <stroke
+                android:width="2dp"
+                android:color="#673AB7" />
+            <solid android:color="@color/cardview_light_background" />
+            <corners android:radius="20dp" />
+        </shape>
+    </item>
+</ripple>
+
