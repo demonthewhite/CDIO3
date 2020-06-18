@@ -4,8 +4,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    tools:context=".view.RegisterPage">
-
+    >
     <Space
         android:layout_width="match_parent"
         android:layout_height="196dp" />

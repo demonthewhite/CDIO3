@@ -112,8 +112,7 @@ public class HomePage extends AppCompatActivity implements BottomNavigationView.
     @Override
     public void onSend(Product fish) {
         //TOdo pass data to bottom sheet
-        product = fish;
-        bottomSheetCart.setOnDataListener(HomePage.this);
+        bottomSheetCart.setOnDataListener(fish);
     }
 
 

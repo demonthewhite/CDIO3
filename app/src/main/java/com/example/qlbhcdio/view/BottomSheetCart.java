@@ -36,8 +36,7 @@ public class BottomSheetCart extends BottomSheetDialogFragment implements CartAd
         return view;
     }
 
-    public void setOnDataListener(HomePage homePage) {
-        Product product = homePage.product;
+    public void setOnDataListener(Product product) {
         mCart.add(product);
     }
 

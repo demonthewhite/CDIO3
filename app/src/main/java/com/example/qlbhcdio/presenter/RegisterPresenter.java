@@ -3,6 +3,7 @@ package com.example.qlbhcdio.presenter;
 
 import com.example.qlbhcdio.view.ViewRegister;
 
+
 public class RegisterPresenter {
 
     ViewRegister.onListenRegister onListenRegister;
