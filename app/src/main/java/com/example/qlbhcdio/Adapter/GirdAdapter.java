@@ -1,6 +1,7 @@
 package com.example.qlbhcdio.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.cardview.widget.CardView;
 
 import com.example.qlbhcdio.R;
 import com.example.qlbhcdio.model.Product;
+import com.example.qlbhcdio.view.ProductPage;
 
 import java.util.List;
 
@@ -64,6 +66,15 @@ public class GirdAdapter extends BaseAdapter {
             @Override
             public void onClick(View v) {
                 selectedItem.onSelect(position);
+            }
+        });
+        viewHolder.cardView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Intent intent = new Intent(context, ProductPage.class);
+                intent.putExtra("product",listSell.get(position));
+                context.startActivity(intent);
+                return true;
             }
         });
 

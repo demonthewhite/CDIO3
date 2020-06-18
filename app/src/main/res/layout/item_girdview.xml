@@ -24,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
 
-                ></ImageView>
+                />
 
             <TextView
                 android:id="@+id/tv_title"
@@ -33,7 +33,7 @@
                 android:layout_below="@+id/img_item_product"
                 android:layout_marginLeft="5dp"
                 android:text="Tên"
-                android:textSize="7pt"></TextView>
+                android:textSize="7pt" />
 
             <TextView
                 android:id="@+id/tv_cost"
@@ -45,7 +45,7 @@
                 android:layout_toLeftOf="@id/tv_dollar"
                 android:text="0"
                 android:textColor="@android:color/holo_red_dark"
-                android:textSize="8pt"></TextView>
+                android:textSize="8pt" />
 
             <TextView
                 android:id="@+id/tv_dollar"
@@ -57,7 +57,7 @@
                 android:layout_marginBottom="5dp"
                 android:text="$"
                 android:textColor="@android:color/holo_red_dark"
-                android:textSize="8pt"></TextView>
+                android:textSize="8pt" />
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>

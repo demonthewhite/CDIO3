@@ -1,6 +1,5 @@
 package com.example.qlbhcdio.presenter;
 
-
 import com.example.qlbhcdio.view.ViewLogin;
 
 public class LoginPresenter {

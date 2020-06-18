@@ -1,7 +1,7 @@
 package com.example.qlbhcdio.view;
 
 public interface ViewRegister {
-    public interface onListenRegister {
+     interface onListenRegister {
 
         void onId(String s);
 
