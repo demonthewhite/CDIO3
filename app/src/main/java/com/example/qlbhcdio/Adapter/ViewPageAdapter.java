@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
 import com.example.qlbhcdio.model.Product;
+import com.example.qlbhcdio.model.User;
 import com.example.qlbhcdio.ui.account.AccountFragment;
 import com.example.qlbhcdio.ui.history.HistoryFragment;
 import com.example.qlbhcdio.ui.shop.ShopFragment;
@@ -13,8 +14,9 @@ import com.example.qlbhcdio.ui.settings.SettingFragment;
 
 public class ViewPageAdapter extends FragmentStatePagerAdapter implements ShopFragment.SendItemToGirdAdapter {
     private SendItemToHomePage itemToHomePage;
+    private User userCurrent;
 
-    public ViewPageAdapter(@NonNull FragmentManager fm, SendItemToHomePage itemToHomePage) {
+    public ViewPageAdapter(@NonNull FragmentManager fm, SendItemToHomePage itemToHomePage,User userCurrent) {
         super(fm);
         this.itemToHomePage = itemToHomePage;
     }
@@ -28,7 +30,7 @@ public class ViewPageAdapter extends FragmentStatePagerAdapter implements ShopFr
             case 1:
                 return new HistoryFragment();
             case 2:
-                return new AccountFragment();
+                return new AccountFragment(userCurrent);
             case 3:
                 return new SettingFragment();
         }

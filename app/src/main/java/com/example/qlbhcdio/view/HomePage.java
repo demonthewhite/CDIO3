@@ -3,6 +3,7 @@ package com.example.qlbhcdio.view;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -12,6 +13,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.example.qlbhcdio.Adapter.ViewPageAdapter;
 import com.example.qlbhcdio.R;
 import com.example.qlbhcdio.model.Product;
+import com.example.qlbhcdio.model.User;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -25,12 +27,19 @@ public class HomePage extends AppCompatActivity implements BottomNavigationView.
     private ViewPageAdapter adapter;
     private FloatingActionButton floatButton;
     private BottomSheetCart bottomSheetCart;
-    public Product product;
+    private User  userCurrent;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_home);
+        userCurrent = (User) getIntent().getExtras().getSerializable("userCurrent");
+        if(userCurrent != null){
+            Toast.makeText(this,"đăng nhập thành công",Toast.LENGTH_SHORT).show();
+        }else {
+            onDestroy() ;
+        }
+
         mViewPager = findViewById(R.id.view_page);
         mBottomNav = findViewById(R.id.bottom_navigation);
         floatButton = findViewById(R.id.float_button_cart);
@@ -41,7 +50,7 @@ public class HomePage extends AppCompatActivity implements BottomNavigationView.
         mViewPager.setOnPageChangeListener(this);
         floatButton.setOnClickListener(this);
 
-        adapter = new ViewPageAdapter(getSupportFragmentManager(), this);
+        adapter = new ViewPageAdapter(getSupportFragmentManager(), this,userCurrent);
         mViewPager.setAdapter(adapter);
     }
 

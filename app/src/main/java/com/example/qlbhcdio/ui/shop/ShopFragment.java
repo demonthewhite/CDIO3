@@ -68,16 +68,16 @@ public class ShopFragment extends Fragment implements GirdAdapter.SelectedItem {
     }
 
     private void listAdd() {
-        mProduct.add(new Product("1", "Cá Chim", "", 4));
-        mProduct.add(new Product("2", "Cá Chuồng", "", 8));
-        mProduct.add(new Product("3", "Cá Hồi", "", 6));
-        mProduct.add(new Product("4", "Cá Ngừ", "", 5));
-        mProduct.add(new Product("5", "Cá Lóc", "", 7));
-        mProduct.add(new Product("6", "Tôm", "", 10));
-        mProduct.add(new Product("7", "Cua Hoàng Đế", "", 50));
-        mProduct.add(new Product("8", "Mực", "", 12));
-        mProduct.add(new Product("9", "Bạch Tuộc", "", 10));
-        mProduct.add(new Product("10", "Cá Cơm", "", 5));
+        mProduct.add(new Product(1, "Cá Chim", "", 4));
+        mProduct.add(new Product(2, "Cá Chuồng", "", 8));
+        mProduct.add(new Product(3, "Cá Hồi", "", 6));
+        mProduct.add(new Product(4, "Cá Ngừ", "", 5));
+        mProduct.add(new Product(5, "Cá Lóc", "", 7));
+        mProduct.add(new Product(6, "Tôm", "", 10));
+        mProduct.add(new Product(7, "Cua Hoàng Đế", "", 50));
+        mProduct.add(new Product(8, "Mực", "", 12));
+        mProduct.add(new Product(9, "Bạch Tuộc", "", 10));
+        mProduct.add(new Product(10, "Cá Cơm", "", 5));
     }
 
     @Override
