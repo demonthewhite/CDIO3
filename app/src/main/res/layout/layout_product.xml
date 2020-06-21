@@ -15,12 +15,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:contentScrim="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|enterAlways"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:layout_scrollInterpolator="@android:anim/decelerate_interpolator"
             app:toolbarId="@+id/toolbar">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:clipChildren="true"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -93,7 +92,6 @@
         android:background="@color/cardview_light_background"
         android:layout_width="match_parent"
         android:layout_height="739dp"
-        android:layout_marginTop="-17dp"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
         <RelativeLayout
