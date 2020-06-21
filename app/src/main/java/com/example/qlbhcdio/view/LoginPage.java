@@ -47,7 +47,6 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
                 goActivity(RegisterPage.class);
                 break;
             case R.id.btnDangNhap:
-                LoginUser(edtID.getText().toString(), edtPassword.getText().toString());
                 break;
             case R.id.tvQuenMatKhau:
                 break;

@@ -33,6 +33,7 @@ public class RegisterPresenter {
             onListenRegister.onEmail("Email không hợp lệ");
             return false;
         }
+
         if (!cb) {
             onListenRegister.onCb("Bạn chưa chấp nhận điều khoản!");
         }

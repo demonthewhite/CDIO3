@@ -49,6 +49,7 @@ public class RegisterPage extends AppCompatActivity implements View.OnClickListe
     }
 
     void Register() {
+
         if (presenter.CheckRegister(edtID.getText().toString()
                 , edtPassword.getText().toString()
                 , edtCPassword.getText().toString()
