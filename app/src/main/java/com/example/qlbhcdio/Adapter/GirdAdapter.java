@@ -55,8 +55,7 @@ public class GirdAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(final int position, View convertView, ViewGroup parent) {
-        Log.e("into", "intooo");
+    public View getView(final int position, View convertView, ViewGroup parent) { 
         ViewHolder viewHolder = null;
         if (convertView == null) {
             viewHolder = new ViewHolder();
