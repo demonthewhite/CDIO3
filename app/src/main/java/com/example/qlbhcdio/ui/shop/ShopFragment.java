@@ -41,6 +41,9 @@ public class ShopFragment extends Fragment implements GirdAdapter.SelectedItem {
         this.sendItemToGirdAdapter = sendItemToGirdAdapter;
     }
 
+    public ShopFragment() {
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,

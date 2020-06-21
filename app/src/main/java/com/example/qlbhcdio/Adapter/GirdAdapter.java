@@ -55,7 +55,7 @@ public class GirdAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(final int position, View convertView, ViewGroup parent) { 
+    public View getView(final int position, View convertView, ViewGroup parent) {
         ViewHolder viewHolder = null;
         if (convertView == null) {
             viewHolder = new ViewHolder();
@@ -71,12 +71,14 @@ public class GirdAdapter extends BaseAdapter {
         Product product = mProducts.get(position);
         viewHolder.title.setText(product.getName());
         viewHolder.cost.setText(String.valueOf(product.getMoney()));
+
         viewHolder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 selectedItem.onSelect(position);
             }
         });
+
         Picasso.with(context)
                 .load(product.getImage()).fit()
                 .into(viewHolder.image);
@@ -86,6 +88,7 @@ public class GirdAdapter extends BaseAdapter {
             @Override
             public boolean onLongClick(View v) {
                 Intent intent = new Intent(context, ProductPage.class);
+                intent.putExtra("product", mProducts.get(position));
                 context.startActivity(intent);
                 return true;
             }
@@ -110,6 +113,7 @@ public class GirdAdapter extends BaseAdapter {
         dataClient.getProduct().enqueue(new Callback<List<Product>>() {
             @Override
             public void onResponse(Call<List<Product>> call, Response<List<Product>> response) {
+                Log.e("Load", "loadview");
                 mProducts = response.body();
 
             }

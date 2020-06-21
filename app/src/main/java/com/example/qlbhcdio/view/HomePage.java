@@ -1,6 +1,7 @@
 package com.example.qlbhcdio.view;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
@@ -37,7 +38,7 @@ public class HomePage extends AppCompatActivity implements BottomNavigationView.
         if(userCurrent != null){
             Toast.makeText(this,"đăng nhập thành công",Toast.LENGTH_SHORT).show();
         }else {
-            onDestroy() ;
+            finish();
         }
 
         mViewPager = findViewById(R.id.view_page);
@@ -120,7 +121,6 @@ public class HomePage extends AppCompatActivity implements BottomNavigationView.
 
     @Override
     public void onSend(Product fish) {
-        //TOdo pass data to bottom sheet
         bottomSheetCart.setOnDataListener(fish);
     }
 
