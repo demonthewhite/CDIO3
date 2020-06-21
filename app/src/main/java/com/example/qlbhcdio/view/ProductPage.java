@@ -13,7 +13,7 @@ public class ProductPage extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_product);
+        setContentView(R.layout.layout_detail);
         if(getIntent().getExtras().getSerializable("product")!=null){
             Product product = (Product) getIntent().getExtras().getSerializable("product");
             Toast.makeText(this,product.getName(),Toast.LENGTH_SHORT).show();

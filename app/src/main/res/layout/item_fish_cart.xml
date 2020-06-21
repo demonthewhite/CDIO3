@@ -58,7 +58,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_toRightOf="@+id/tv_costCart"
                 android:gravity="center|start"
-                android:text="$"
+                android:text="đ"
                 android:textSize="7pt" />
 
             <Button

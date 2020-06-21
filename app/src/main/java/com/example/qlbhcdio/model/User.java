@@ -9,71 +9,82 @@ public class User implements Serializable {
 
     @SerializedName("TENDN")
     @Expose
-    private String tENDN;
+    private String id;
     @SerializedName("MATKHAU")
     @Expose
-    private String mATKHAU;
+    private String password;
     @SerializedName("TENKH")
     @Expose
-    private String tENKH;
+    private String name;
     @SerializedName("SDT")
     @Expose
-    private String sDT;
+    private String numPhone;
     @SerializedName("LOAITK")
     @Expose
-    private Integer lOAITK;
+    private Integer level;
+    @SerializedName("DIACHI")
+    @Expose
+    private String address;
 
-    public User(String tENDN, String mATKHAU) {
-        this.tENDN = tENDN;
-        this.mATKHAU = mATKHAU;
+    public String getId() {
+        return id;
     }
 
-    public User(String tENDN, String mATKHAU, String tENKH, String sDT, Integer lOAITK) {
-        this.tENDN = tENDN;
-        this.mATKHAU = mATKHAU;
-        this.tENKH = tENKH;
-        this.sDT = sDT;
-        this.lOAITK = lOAITK;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getTENDN() {
-        return tENDN;
+    public String getPassword() {
+        return password;
     }
 
-    public void setTENDN(String tENDN) {
-        this.tENDN = tENDN;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public String getMATKHAU() {
-        return mATKHAU;
+    public String getName() {
+        return name;
     }
 
-    public void setMATKHAU(String mATKHAU) {
-        this.mATKHAU = mATKHAU;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getTENKH() {
-        return tENKH;
+    public String getNumPhone() {
+        return numPhone;
     }
 
-    public void setTENKH(String tENKH) {
-        this.tENKH = tENKH;
+    public void setNumPhone(String numPhone) {
+        this.numPhone = numPhone;
     }
 
-    public String getSDT() {
-        return sDT;
+    public Integer getLevel() {
+        return level;
     }
 
-    public void setSDT(String sDT) {
-        this.sDT = sDT;
+    public void setLevel(Integer level) {
+        this.level = level;
     }
 
-    public Integer getLOAITK() {
-        return lOAITK;
+    public String getAddress() {
+        return address;
     }
 
-    public void setLOAITK(Integer lOAITK) {
-        this.lOAITK = lOAITK;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
+    public User(String id, String password) {
+        this.id = id;
+        this.password = password;
+    }
+
+    public User(String id, String password, String name, String numPhone, Integer level, String address) {
+        this.id = id;
+        this.password = password;
+        this.name = name;
+        this.numPhone = numPhone;
+        this.level = level;
+        this.address = address;
+    }
 }

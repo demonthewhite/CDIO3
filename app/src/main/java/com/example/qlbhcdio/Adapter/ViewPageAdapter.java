@@ -19,6 +19,7 @@ public class ViewPageAdapter extends FragmentStatePagerAdapter implements ShopFr
     public ViewPageAdapter(@NonNull FragmentManager fm, SendItemToHomePage itemToHomePage,User userCurrent) {
         super(fm);
         this.itemToHomePage = itemToHomePage;
+        this.userCurrent = userCurrent;
     }
 
     @NonNull

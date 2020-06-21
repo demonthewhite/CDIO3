@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.qlbhcdio.R;
 import com.example.qlbhcdio.model.Product;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -40,6 +41,12 @@ public class CartAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, final int position) {
         ((ItemViewHolder) holder).tv_name.setText(mProduct.get(position).getName());
         ((ItemViewHolder) holder).tv_cos.setText(String.valueOf(mProduct.get(position).getMoney()));
+        Picasso.with(context)
+                .load(mProduct.get(position).getImage())
+                .centerCrop().resize(100,100)
+                .into(  ((ItemViewHolder) holder).img_view);
+
+
         ((ItemViewHolder) holder).btn_delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
