@@ -12,24 +12,24 @@ import android.widget.TextView;
 import com.example.qlbhcdio.R;
 import com.example.qlbhcdio.presenter.LoginPresenter;
 
-public class LoginPage extends AppCompatActivity implements View.OnClickListener, ViewLogin.onListenLogin {
+public class LoginPage extends AppCompatActivity implements View.OnClickListener,
+        ViewLogin.setOnListenerValuesText,ViewLogin.setOnLogin {
+
     private LoginPresenter loginPresenter;
-    Button btnSignIn;
-    Button btnRegister;
-    EditText edtID, edtPassword;
-    TextView tvForgotPassword;
+    private Button btnSignIn;
+    private Button btnRegister;
+    private EditText edtID, edtPassword;
+    private TextView tvForgotPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_login);
         init();
-        loginPresenter = new LoginPresenter(this);
+        loginPresenter = new LoginPresenter(this,this);
         btnSignIn.setOnClickListener(this);
         btnRegister.setOnClickListener(this);
         tvForgotPassword.setOnClickListener(this);
-
-
     }
 
     void init() {
@@ -47,6 +47,7 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
                 goActivity(RegisterPage.class);
                 break;
             case R.id.btnDangNhap:
+                    LoginUser(edtID.getText().toString(),edtPassword.getText().toString());
                 break;
             case R.id.tvQuenMatKhau:
                 break;
@@ -54,9 +55,7 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
     }
 
     void LoginUser(String id, String password) {
-        if (loginPresenter.Login(id, password)) {
-            goActivity(HomePage.class);
-        }
+        loginPresenter.LoginAccount(id,password);
     }
 
     void goActivity(Class t) {
@@ -72,5 +71,15 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
     @Override
     public void onPassword(String password) {
         edtPassword.setError(password);
+    }
+
+    @Override
+    public void onSuccess(String s) {
+
+    }
+
+    @Override
+    public void onFailed(String s) {
+
     }
 }
