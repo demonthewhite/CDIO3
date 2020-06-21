@@ -87,7 +87,6 @@ public class GirdAdapter extends BaseAdapter {
             @Override
             public boolean onLongClick(View v) {
                 Intent intent = new Intent(context, ProductPage.class);
-                intent.putExtra("product", mProducts.get(position));
                 context.startActivity(intent);
                 return true;
             }
