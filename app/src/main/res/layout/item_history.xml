@@ -72,7 +72,9 @@
                 android:layout_below="@+id/tv_date_bill"
                 android:layout_alignParentRight="true"
                 android:layout_marginLeft="5dp"
-                android:text="$"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="9dp"
+                android:text="đ"
                 android:textSize="7pt"
                 android:textStyle="bold" />
 

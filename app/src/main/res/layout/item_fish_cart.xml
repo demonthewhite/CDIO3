@@ -5,10 +5,10 @@
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
-        android:elevation="10dp"
         android:id="@+id/CardView_Cart"
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:elevation="10dp"
         app:cardUseCompatPadding="true">
 
         <RelativeLayout
@@ -58,8 +58,27 @@
                 android:layout_marginLeft="5dp"
                 android:layout_toRightOf="@+id/tv_costCart"
                 android:gravity="center|start"
-                android:text="$"
+                android:text="đ"
                 android:textSize="7pt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="7dp"
+                android:layout_toLeftOf="@+id/tv_amount_cart"
+                android:text="x"
+                android:textSize="9pt" />
+
+            <TextView
+                android:id="@+id/tv_amount_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="20dp"
+                android:layout_toLeftOf="@+id/btn_delete_cart"
+                android:text="1"
+                android:textSize="9pt" />
 
             <Button
                 android:id="@+id/btn_delete_cart"
@@ -68,8 +87,8 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerInParent="true"
                 android:layout_marginRight="10dp"
-                android:clickable="true"
-                android:background="@drawable/btn_delete_itemcart" />
+                android:background="@drawable/btn_delete_itemcart"
+                android:clickable="true" />
         </RelativeLayout>
 
 
