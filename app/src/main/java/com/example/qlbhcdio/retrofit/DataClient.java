@@ -5,6 +5,7 @@ package com.example.qlbhcdio.retrofit;
 
 import android.database.Observable;
 
+import com.example.qlbhcdio.model.MessengerRes;
 import com.example.qlbhcdio.model.Product;
 import com.example.qlbhcdio.model.User;
 
@@ -23,10 +24,6 @@ public interface DataClient {
     @POST("login")
     Call <User> LoginUser(@Field("id") String id , @Field("password") String password );
 
-
-    @POST("login")
-    Call<User> LoginUser2(@Body User user);
-
     @FormUrlEncoded
     @POST("Register")
     Call<String > Register (@Field("id") String id,
@@ -35,5 +32,11 @@ public interface DataClient {
 
     @GET("products")
     Call<List<Product>> getProduct();
+
+    @FormUrlEncoded
+    @POST("order/new/")
+    Call<MessengerRes> newDetails (@Field("tendn") String name,
+                                   @Field("ngay") String Date,
+                                   @Field("data") String data );
 
 }

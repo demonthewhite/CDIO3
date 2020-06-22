@@ -6,10 +6,10 @@
 
 
     <FrameLayout
-        android:layout_above="@+id/bottom_navigation"
         android:id="@+id/frame_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_navigation">
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/view_page"
@@ -28,10 +28,9 @@
         android:src="@drawable/ic_baseline_shopping"
         app:backgroundTint="#F8FF568F"
         app:rippleColor="#FFE5EE"
-        app:tint="@color/cardview_light_background"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+        app:tint="@color/cardview_light_background" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -41,6 +40,7 @@
         app:itemIconTint="@android:color/holo_orange_dark"
         app:itemRippleColor="@android:color/tertiary_text_dark"
         app:itemTextColor="@android:color/holo_orange_light"
+        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
         app:menu="@menu/bottom_nav_menu" />
 
 

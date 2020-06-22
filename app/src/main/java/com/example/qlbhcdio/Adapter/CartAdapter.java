@@ -39,14 +39,15 @@ public class CartAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, final int position) {
-        ((ItemViewHolder) holder).tv_name.setText(mProduct.get(position).getName());
-        ((ItemViewHolder) holder).tv_cos.setText(String.valueOf(mProduct.get(position).getMoney()));
+        Product product = mProduct.get(position);
+        ((ItemViewHolder) holder).tv_name.setText(product.getName());
+        ((ItemViewHolder) holder).tv_cos.setText(String.valueOf(product.getMoney()*product.getAmount()));
+        ((ItemViewHolder) holder).tv_amount.setText(String.valueOf(product.getAmount()));
         Picasso.with(context)
                 .load(mProduct.get(position).getImage())
                 .centerCrop().resize(100,100)
                 .into(  ((ItemViewHolder) holder).img_view);
-
-
+        //
         ((ItemViewHolder) holder).btn_delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,9 +62,7 @@ public class CartAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     }
 
     class ItemViewHolder extends RecyclerView.ViewHolder {
-
-        TextView tv_name;
-        TextView tv_cos;
+        TextView tv_name,tv_cos,tv_amount;
         ImageView img_view;
         Button btn_delete;
 
@@ -72,6 +71,7 @@ public class CartAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             btn_delete = itemView.findViewById(R.id.btn_delete_cart);
             tv_name = itemView.findViewById(R.id.tv_nameFishCart);
             tv_cos = itemView.findViewById(R.id.tv_costCart);
+            tv_amount = itemView.findViewById(R.id.tv_amount_cart);
             img_view = itemView.findViewById(R.id.img_fishCart);
         }
     }

@@ -16,7 +16,7 @@ public class Product implements Serializable {
     private String name;
     @SerializedName("DONGIA")
     @Expose
-    private double money;
+    private double money = 0 ;
     @SerializedName("HINHANH")
     @Expose
     private String  image;
@@ -26,6 +26,22 @@ public class Product implements Serializable {
     @SerializedName("MALOAI")
     @Expose
     private Integer idParent;
+    @SerializedName("SOLUONG")
+    @Expose
+    private Integer amount ;
+
+    public Integer getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Integer amount) {
+        this.amount = amount;
+    }
+    public  void incrementAmount(){
+        this.amount = amount +1 ;
+    }
+
+
 
 
     public Integer getId() {

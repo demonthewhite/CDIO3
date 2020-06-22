@@ -22,22 +22,21 @@ public class HomePage extends AppCompatActivity implements BottomNavigationView.
         , ViewPager.OnPageChangeListener
         , View.OnClickListener
         , ViewPageAdapter.SendItemToHomePage {
-
     private BottomNavigationView mBottomNav;
     private ViewPager mViewPager;
     private ViewPageAdapter adapter;
     private FloatingActionButton floatButton;
     private BottomSheetCart bottomSheetCart;
-    private User  userCurrent;
+    public User userCurrent;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_home);
         userCurrent = (User) getIntent().getExtras().getSerializable("userCurrent");
-        if(userCurrent != null){
-            Toast.makeText(this,"đăng nhập thành công",Toast.LENGTH_SHORT).show();
-        }else {
+        if (userCurrent != null) {
+            Toast.makeText(this, "đăng nhập thành công", Toast.LENGTH_SHORT).show();
+        } else {
             finish();
         }
 
@@ -45,13 +44,13 @@ public class HomePage extends AppCompatActivity implements BottomNavigationView.
         mBottomNav = findViewById(R.id.bottom_navigation);
         floatButton = findViewById(R.id.float_button_cart);
 
-        bottomSheetCart = new BottomSheetCart();
+        bottomSheetCart = new BottomSheetCart(userCurrent);
 
         mBottomNav.setOnNavigationItemSelectedListener(this);
         mViewPager.setOnPageChangeListener(this);
         floatButton.setOnClickListener(this);
 
-        adapter = new ViewPageAdapter(getSupportFragmentManager(), this,userCurrent);
+        adapter = new ViewPageAdapter(getSupportFragmentManager(), this, userCurrent);
         mViewPager.setAdapter(adapter);
     }
 
@@ -120,8 +119,8 @@ public class HomePage extends AppCompatActivity implements BottomNavigationView.
     }
 
     @Override
-    public void onSend(Product fish) {
-        bottomSheetCart.setOnDataListener(fish);
+    public void onSend(Product product) {
+        bottomSheetCart.setOnDataListener(product);
     }
 
 

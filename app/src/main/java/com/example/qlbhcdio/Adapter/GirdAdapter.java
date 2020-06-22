@@ -113,9 +113,7 @@ public class GirdAdapter extends BaseAdapter {
         dataClient.getProduct().enqueue(new Callback<List<Product>>() {
             @Override
             public void onResponse(Call<List<Product>> call, Response<List<Product>> response) {
-                Log.e("Load", "loadview");
                 mProducts = response.body();
-
             }
 
             @Override
